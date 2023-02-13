@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+.grid-bill {
+  --row-gap: #{size(32)};
+  --column-gap: #{size(48)};
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: var(--row-gap, $grid-gap);
+  column-gap: var(--column-gap, $grid-gap);
+
+  @include mq(large) {
+    --row-gap: #{size(40)};
+    --column-gap: #{size(48)};
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: var(--row-gap, $grid-gap);
+    column-gap: var(--column-gap, $grid-gap);
+  }
+}

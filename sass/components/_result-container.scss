@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+
+.result-container {
+  // Flex parent
+  display: flex;
+  flex-direction: column;
+  gap: size(32);
+
+  padding-inline: size(24);
+  padding-block-start: size(38);
+  padding-block-end: size(24);
+  border-radius: size(15);
+
+  @include mq(large) {
+    // Flex parent
+    gap: 0;
+    justify-content: space-between;
+
+    padding-inline: size(40);
+    padding-block-start: size(40);
+    padding-block-end: size(40);
+
+    // Grid child
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
+
+  span {
+    font-size: size(12);
+    color: clr(neutral, 900);
+    display: block;
+  }
+}

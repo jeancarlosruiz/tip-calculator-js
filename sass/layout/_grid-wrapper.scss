@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+
+.grid-wrapper {
+  --grid-both-gap: #{size(16)};
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--grid-both-gap, $grid-gap);
+
+  @include mq(large) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

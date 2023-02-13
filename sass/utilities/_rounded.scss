@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.rounded {
+  border-radius: size(25) size(25) 0 0;
+
+  @include mq(large) {
+    border-radius: size(25);
+  }
+}

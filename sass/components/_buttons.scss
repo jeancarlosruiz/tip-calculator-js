@@ -1,33 +1,56 @@
 @use '../abstracts/' as *;
 
-.button {
+.button-tip {
   // Some default removed from the btn.
   display: inline-flex;
+  justify-content: center;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1;
-  border: 0;
+  border: none;
+  border-radius: size(5);
   transition: 275ms ease;
-  padding: 1.125em 2em;
+  padding: 0.8em 2em;
   font-weight: $fw-700;
+  background-color: clr(primary, 900);
+  color: clr(neutral, 100);
 
-  &[data-type='accent'] {
-    background-color: clr(primary, 400);
-    color: clr(neutral, 900);
+  &:hover {
+    background-color: clr(primary, 500);
+    color: clr(primary, 900);
   }
 
-  &[data-type='outline'] {
-    --outline-size: 5px;
-
-    background: transparent;
-    outline: var(--outline-size) solid clr(neutral, 100);
-    outline-offset: calc(var(--outline-size) * -1);
-    color: clr(neutral, 100);
+  &:focus {
+    background-color: clr(primary, 600);
+    color: clr(primary, 900);
   }
+}
 
-  &:is(:hover, :focus) {
-    background-color: clr(neutral, 100);
-    color: clr(neutral, 900);
-  }
+.button-reset {
+  // Some default removed from the btn.
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  border: none;
+  border-radius: size(5);
+  transition: 275ms ease;
+  padding: 0.8em 2em;
+  font-weight: $fw-700;
+  background-color: clr(primary, 800);
+  color: clr(primary, 900);
+
+  //   save for when desible false
+  //   &:hover {
+  //     background-color: clr(primary, 500);
+  //     color: clr(primary, 900);
+  //   }
+
+  //   &:focus {
+  //     background-color: clr(primary, 600);
+  //     color: clr(primary, 900);
+  //   }
 }

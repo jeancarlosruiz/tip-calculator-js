@@ -1,14 +1,23 @@
-// Incluye un sass map donde podremos nombrar y crear variables personalizadas en cada proyecto.
+// SOURCE: style-guide.
+// - Very dark cyan: hsl(183, 100%, 15%)
+// - Dark grayish cyan: hsl(186, 14%, 43%)
+// - Grayish cyan: hsl(184, 14%, 56%)
+// - Light grayish cyan: hsl(185, 41%, 84%)
+// - Very light grayish cyan: hsl(189, 41%, 97%)
+// - White: hsl(0, 0%, 100%)
 
 $colors: (
   neutral: (
-    900: #212121,
-    400: #5c5c5c,
-    200: #f8f8f8,
-    100: #ffffff,
+    100: hsl(0, 0%, 100%),
+    200: hsl(185, 41%, 84%),
+    900: hsl(186, 14%, 43%),
   ),
   primary: (
-    400: #ff6635,
-    500: #dd4e11,
+    400: hsl(185, 38%, 97%),
+    500: hsl(172, 61%, 77%),
+    600: hsl(172, 67%, 45%),
+    700: hsl(184, 14%, 56%),
+    800: hsl(183, 78%, 24%),
+    900: hsl(183, 100%, 15%),
   ),
 );

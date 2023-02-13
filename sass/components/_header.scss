@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-block-end: size(40);
+
+  @include mq(medium) {
+    margin-block-end: size(88);
+  }
+}
